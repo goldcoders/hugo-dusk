@@ -82,20 +82,12 @@ sections:
       - name: Yuri
         image:
           name: CEO / Developer
-          url: https://scontent.fcrk1-3.fna.fbcdn.net/v/t1.6435-9/87372254_2769415686512834_4711647890433376256_n.jpg?_nc_cat=101&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeGmVZLE5G4eusVPZDx_1iQU1UAjSnuhrUrVQCNKe6GtSrU5ZzsVCzvVC-WjAYEWaYr6EAf9yPyAuFmdFEWVxmYd&_nc_ohc=MPZqNX78lPIAX8B_rbW&_nc_ht=scontent.fcrk1-3.fna&oh=fb62c18dfc3809a90e1f82f6a1b2cc52&oe=60E099CE
+          url: /images/profile.jpg
         role:
           name: CEO
         description: I actually think that the most efficacious way of making a
           difference is to lead by example, and doing random acts of kindness is
           setting a very good example of how to behave in the world.
-      - name: Drew
-        image:
-          name: CTO
-          url: https://scontent.fcrk1-3.fna.fbcdn.net/v/t1.18169-9/18034091_1329870170432765_4794002620839940695_n.jpg?_nc_cat=104&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeEzuQ4pEaCed9lSLbu_3f2IWprOv1f9_89ams6_V_3_z-EuUviIcbTUtKY8t5MyOPzWInHUfnn7BmwGkf-W87hD&_nc_ohc=08QWLbpsY2oAX-lbN61&_nc_ht=scontent.fcrk1-3.fna&oh=dbe82c04cbd93ad8f4ec4a8060ef790f&oe=60DEA0BE
-        role:
-          name: CTO / Co-Founder
-        description: Together we can change the world, just one random act of kindness
-          at a time.
       - name: Echo
         image:
           name: VP Marketing
@@ -110,8 +102,8 @@ sections:
           url: /images/arjay.jpg
         role:
           name: Co-Founder
-        description: "In the business world, everyone is paid in two coins: cash and
-          experience. Take the experience first; the cash will come later."
+        description: “Success is walking from failure to failure with no loss of
+          enthusiasm.”
       - name: Bobby
         image:
           name: Team Member
@@ -127,6 +119,14 @@ sections:
           name: Brand Ambassadress
         description: I always find beauty in things that are odd and imperfect, they are
           much more interesting.
+      - name: Cholo
+        image:
+          name: Team Member
+          url: /images/kpp72ou.jpeg
+        role:
+          name: COO
+        description: "In the business world, everyone is paid in two coins: cash and
+          experience. Take the experience first; the cash will come later."
   - bg:
       shade: "500"
       color: purple
