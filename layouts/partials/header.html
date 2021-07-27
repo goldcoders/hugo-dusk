@@ -20,7 +20,7 @@
               {{- $.Site.Params.brand.name -}}
               {{ if eq $.Site.Params.brand.font "aguafina"}}
               <span class="font-hairline leading-10 absolute top-0 mb-15 ml-2 text-2xl mx-2
-              font-{{ $.Site.Params.tag.font}} 
+              font-{{ $.Site.Params.tag.font}}
               {{ with $.Site.Params.tag.color -}}text-{{.}}{{with $.Site.Params.tag.shade}}-{{.}}{{end}}{{end -}}
               ">{{$.Site.Params.brand.tag}}</span>
               {{ else if eq $.Site.Params.brand.font "qwigley"}}
@@ -42,13 +42,13 @@
         </div>
         {{/* <!-- Navigation Menu --> */ -}}
         <div class="hidden lg:ml-6 lg:flex">
-          {{ range .Site.Menus.main -}} 
-          {{- $url := .URL | relLangURL -}} 
-          {{- with .Page -}} {{- $url = .RelPermalink -}} 
+          {{ range .Site.Menus.main -}}
+          {{- $url := .URL | relLangURL -}}
+          {{- with .Page -}} {{- $url = .RelPermalink -}}
           {{- end -}}
           <a href="{{.URL}}" class="ml-8 inline-flex items-center px-1 pt-1 text-sm font-medium leading-5  focus:outline-none transition duration-150 ease-in-out
           {{- if $.IsMenuCurrent `main` . | or ($.HasMenuCurrent `main` .) | or (eq $.RelPermalink $url) }}
-          border-b-4 
+          border-b-4
           text-navbar-active
           border-brand
           hover:text-navbar-hover
@@ -82,9 +82,9 @@
       </div>
       {{- end -}}
         {{/* <!-- Shopping Cart Menu --> */}}
-      {{ if or (eq $.Site.Data.cart.enable "true") (eq $.Page.Params.showcart "true")}}
+      {{ if $.Page.Params.showcart }}
       {{ with .Site.Data.cart }}
-      <button x-cloak @click="cartOpen = !cartOpen" x-show="!cartOpen" class="text-sm border-transparent focus:outline-none transition duration-150 ease-in-out" id="cart-menu" aria-label="Cart menu" aria-haspopup="true">
+      <button x-cloak @click="cartOpen = !cartOpen" x-show="!cartOpen" class="{{ if eq $.Page.Params.showsearch false -}}flex-1{{end}} flex items-center justify-end text-sm border-transparent focus:outline-none transition duration-150 ease-in-out" id="cart-menu" aria-label="Cart menu" aria-haspopup="true">
       <div slot="icon" class="relative">
           <div
             x-text="cart.length"
@@ -136,10 +136,10 @@
     :class="{'hidden': !menu, 'block': menu}"
     >
     <div class="pt-2 pb-3">
-      {{- range .Site.Menus.main -}} 
-      {{- $url := .URL | relLangURL -}} 
-      {{- with .Page -}} 
-      {{- $url = .RelPermalink -}} 
+      {{- range .Site.Menus.main -}}
+      {{- $url := .URL | relLangURL -}}
+      {{- with .Page -}}
+      {{- $url = .RelPermalink -}}
       {{- end -}}
       <a
         href="{{.URL}}"
