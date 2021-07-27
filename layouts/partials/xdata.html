@@ -1,6 +1,6 @@
 <script>
     {{/* Set Local Storage for Cart and Paymongo */}}
-    {{ if or (eq $.Site.Data.cart.enable "true") (eq $.Page.Params.showcart "true")}}
+    {{ if $.Page.Params.showcart }}
     var cart = store.namespace("cart");
     var paymongo = store.namespace("paymongo");
     {{/* Initialize Cart */}}
@@ -81,9 +81,9 @@
     {{/* Set Default Xdata then Merge All User Define Data */}}
     function xdata() {
     {{- $xdata := dict "menu" false -}}
-    {{- $user_data := $.Page.Params.data -}}
-    {{- range $key, $val := $user_data -}}
-    {{- $prop := dict $key $val -}}
+    {{- $user_data := $.Page.Params.custom -}}
+    {{- range $user_data -}}
+    {{- $prop := dict .key .value -}}
     {{- $xdata = merge $xdata $prop -}}
     {{ end }}
         return JSON.parse( {{- $xdata | jsonify -}} );
@@ -176,7 +176,7 @@
                     return;
                 }
                 {{- end }}
-                
+
                 let url = {{ $.Page.Params.form.action | absURL }};
 
                 let data = {
@@ -207,8 +207,8 @@
 
                 var opts = {
                 method: "{{- $.Page.Params.form.method -}}",
-                mode: "no-cors", 
-                redirect: "follow", 
+                mode: "no-cors",
+                redirect: "follow",
                 referrer: "no-referrer",
                 body: JSON.stringify(json)
                 };
@@ -217,7 +217,7 @@
                     let response = await fetch(url, opts);
 
                     if(!response.ok){
-                        throw Error("Failed Submittion");
+                        throw Error("Failed to Submit");
                     }
                 }catch(error){
                     console.log(error)
@@ -236,7 +236,7 @@
     }// end contanct
     {{ end }}
     {{/* Init Shop Cart Data */}}
-{{ if or (eq $.Site.Data.cart.enable "true") (eq $.Page.Params.showcart "true")}}
+{{ if $.Page.Params.showcart }}
 
 
 {{- $featured_image := $.Page.Params.featured_image|relURL -}}
@@ -347,7 +347,7 @@ var current_product = window.product_details = {
 };
 {{end}}
 
-{{ if or (eq $.Site.Data.cart.enable "true") (eq $.Page.Params.showcart "true")}}
+{{ if $.Page.Params.showcart }}
 function shopcart(){
     return {
         cartNotify: false,
@@ -486,7 +486,7 @@ function shopcart(){
             } catch (error) {
                     console.log(error)
             }
-          
+
         },
         async checkout() {
           const data = await this.createLink();
@@ -520,7 +520,7 @@ function shopcart(){
         colorPicker(color){
             return `background-color: ${color.color}`;
         },
-        {{/* TODO: create another implementation for product.html 
+        {{/* TODO: create another implementation for product.html
             which dont need to use this.product_id & this.product_name
             Create a new check if for not $.IsPage but .Type products
         */ -}}
@@ -542,7 +542,7 @@ function shopcart(){
             this.product_details.name = name;
             this.updatePricing();
         },
-        {{/* TODO: create another implementation for product.html 
+        {{/* TODO: create another implementation for product.html
             which dont need to use this.product_id & this.product_name
             Create a new check if for not $.IsPage but .Type products
         */ -}}
@@ -567,13 +567,13 @@ function shopcart(){
         },
         updatePricing(){
             let self = this;
-            
+
             let colorIndex = self.colors.findIndex(item => item.name == self.product_details.options.color.name)
             let colorOption = {
                 amount: self.colors[colorIndex]?.amount,
                 change: self.colors[colorIndex]?.change
             };
-            
+
             let sizeIndex = self.sizes.findIndex(item => item.name == self.product_details.options.size.name)
             let sizeOption = {
                 amount: self.sizes[sizeIndex]?.amount,
