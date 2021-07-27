@@ -7,7 +7,7 @@ Official Website Repository of `goldcoders.dev`.
 
 # 1 Click Deploy
 
-[![1 Click Deploy](https://vercel.com/button)](https://app.netlify.com/start/deploy?repository=https://github.com/goldcoders/site&stack=cms)
+[![1 Click Deploy](https://vercel.com/button)](https://app.netlify.com/start/deploy?repository=https://github.com/thriftapps/goldcoders.dev&stack=cms)
 
 
 ## Requirements
@@ -19,7 +19,7 @@ Official Website Repository of `goldcoders.dev`.
 
 ## Install CMS
 
--   [CMS](https://github.com/goldcoders/hugofy)
+-   [CMS](https://github.com/thriftapps/cms)
 
 
 ## Using Contact Page
