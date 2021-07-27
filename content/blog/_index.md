@@ -1,8 +1,7 @@
 ---
 index: true
-data: {}
-draft: false
-showcart: true
+draft: true
+showcart: false
 showsearch: true
 showpagination: true
 title: Blog

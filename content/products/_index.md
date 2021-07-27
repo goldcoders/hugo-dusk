@@ -1,6 +1,5 @@
 ---
 index: true
-data: {}
 draft: true
 showcart: true
 showsearch: true

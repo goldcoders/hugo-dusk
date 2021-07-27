@@ -1,13 +1,14 @@
 ---
-description: Let build your Next Big Thing App A Reality, We Help You Bring
-  Ideas to Reality.
 featured_image: /images/app-development.png
-date: 2021-06-04T22:40:12.245Z
 showsearch: false
-data: {}
 author:
   name: Goldcoders
   avatar: https://avatars.dicebear.com/api/avataaars/richkid.svg
+index: true
+title: Custom Software and Application Development
+description: Let build your Next Big Thing App A Reality, We Help You Bring
+  Ideas to Reality.
+date: 2021-06-04T22:40:12.245Z
 showcart: false
 sections:
   - logos:
@@ -145,6 +146,4 @@ sections:
     image: /images/thriftshop-apps.jpg
     description: An Opinionated E-Commerce Site For Filipino Online Seller. Built
       With Fastest Web Framework Hugo for Its Content Management System.
-index: true
-title: Custom Software and Application Development
 ---

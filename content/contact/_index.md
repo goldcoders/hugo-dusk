@@ -2,10 +2,12 @@
 draft: false
 showcontact: true
 index: true
-data:
-  contact_agree: false
 showcart: false
 showsearch: false
+custom:
+  - type: data
+    key: contact_agree
+    value: "false"
 title: Contact Us
 description: If you are in need to get in touch with us, we are happy to reply.
   Create a New Message below.
