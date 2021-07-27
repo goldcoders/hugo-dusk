@@ -2,7 +2,8 @@
   publish = "public"
   functions = "functions"
   # command = "sed -i \"s|SITE_URL|${HUGO_BASEURL}|g\" netlify.toml && yarn prod"
-  command = "yarn prod"
+  #command = "yarn prod"
+  command = "yarn hugo-build"
 # command: ntl dev
 [dev]
 command = "hugo server --disableFastRender"
