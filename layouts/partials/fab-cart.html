@@ -1,4 +1,4 @@
-{{ if or (eq $.Site.Data.cart.enable "true") (eq $.Page.Params.showcart "true")}}
+{{ if $.Page.Params.showcart }}
 {{ with .Site.Data.cart }}
 <div
   x-cloak
@@ -60,7 +60,7 @@
                ₱<span x-text="item.price"></span> <span class="mx-2">x</span>
             <span x-text="item.qty"></span>
           </div>
-           
+
           </div>
           <div
             class="flex sm:flex-grow flex-initial sm:justify-end items-center justify-center text-sm"
@@ -122,7 +122,7 @@
             {{.empty_cart_label}}
           </h2>
         </div>
-        
+
         </div>
       </div>
       <div
