@@ -1,32 +1,15 @@
-# Goldcoders Corp - Official Site
-
-Official Website Repository of `goldcoders.dev`.
+# Thriftshop Site - Default Theme
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/17758869-2b98-4ae6-87f3-6206ac5d8578/deploy-status)](https://app.netlify.com/sites/goldcoders/deploys)
-
-
-# 1 Click Deploy
-
-[![1 Click Deploy](https://vercel.com/button)](https://app.netlify.com/start/deploy?repository=https://github.com/thriftapps/goldcoders.dev&stack=cms)
-
-
 ## Requirements
 
--   [Hugo v0.83.1+extended](https://gohugo.io/getting-started/installing/)
--   [NodeJs v14.16.0](https://nodejs.org/en/download/)
--   [Netlify CLI](https://cli.netlify.com)
--   [Parcel](https://parceljs.org/getting_started.html)
-
-## Install CMS
-
--   [CMS](https://github.com/thriftapps/cms)
-
+-   Thriftshop Site Manager v1.0.0
+-   [Hugo v0.88.1+extended](https://gohugo.io/getting-started/installing/)
+-   [NodeJs v14.17.6](https://nodejs.org/en/download/)
 
 ## Using Contact Page
 ### Recaptcha V2
 - [Create Recaptcha For Your Domain](https://www.google.com/recaptcha/admin/create) and copy Site Key
-
-## Google Forms
 
 ### Creating New Google Form
 - Create New Form
