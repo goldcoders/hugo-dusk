@@ -1,15 +1,16 @@
 ---
-featured_image: /images/app-development.png
-showsearch: false
+index: true
+title: The most affordable way to manage unlimited no. of sites offline and
+  quickly deploy sites online
+description: Get started now building unlimited no. of sites that can be quickly
+  deploy at a click of button. Pay once use forever!
+featured_image: /images/thriftshop-apps.jpg
+date: 2021-06-04T22:40:12.245Z
+showsearch: true
 author:
   name: Goldcoders
   avatar: https://avatars.dicebear.com/api/avataaars/richkid.svg
-index: true
-title: Custom Software and Application Development
-description: Let build your Next Big Thing App A Reality, We Help You Bring
-  Ideas to Reality.
-date: 2021-06-04T22:40:12.245Z
-showcart: false
+showcart: true
 sections:
   - logos:
       enable: false
@@ -18,51 +19,58 @@ sections:
       colMD: 6
       col: 2
       images: []
-    subheader: ""
-    header: Custom Software
+    subheader: Trusted by thousands of users to build their sites
+    header: The Most Affordable
     featured:
-      url: /images/app-development.png
+      url: /images/thriftshop-apps.jpg
       alt: Feature Image
     template: templates/hero/app-with-screenshot.html
     type: hero_app_with_screenshot
-    tag: App Development
+    tag: Way to Manage Sites
     video:
-      id: ""
+      id: tt-tdyky2o8
     bglower:
-      color: gray
-      shade: "800"
-    description: "> Lets build your App, Tailored to your needs, Without breaking
-      your budget."
+      color: primary-darker
+      shade: ""
+    description: "> Manage unlimited no. of sites offline, and quickly deploy sites
+      online with a click of a button."
     bgupper:
       color: gray
       shade: "50"
   - type: featured_centered_2x2
     template: templates/features/centered-2x2.html
-    header: We Provide Solutions
-    tag: Benefits of Custom Software
-    description: "> Built From Ground Up"
+    header: Site Manager
+    tag: Crossplatform (Linux, Windows, MacOS)
+    description: "> Everybody deserves to enjoy the benefits of not having to pay
+      any monthly fees for their websites, whether it be blog, portfolio,
+      ecommerce or hobby sites."
     features:
-      - title: Full Ownership
-        description: Client own 100% of their software, so you'll never pay subscription
-          or royalty fees. Want to add another feature or more users? No
-          problem; you have all the control.
-        image: /images/copyright-guidelines.svg
-      - title: Full Flexibility
-        description: With a custom-built solution, you can do whatever you want whenever
-          you want with your product. That means your software can grow and
-          change with your business, not the other way around.
-        image: /images/data.svg
-      - title: Competitive Advantages
-        description: Unlike "off-the-shelf" software, a custom-built solution can boost
-          your company's performance and be a valuable IP asset, two strong
-          competitive advantages.
-        image: /images/bestseller.svg
-      - title: Technology Independent
-        description: Goldcoders Corp is a technology-agnostic company. In other words,
-          we don't sell or promote specific technologies, so we're 100% focused
-          on our customers. We pick the right stack for your unique business
-          needs and goals.
-        image: /images/api.svg
+      - title: Lifetime Goodies
+        description: Our License can be use lifetime for the version you bought. Get
+          free customizable theme on purchase free updates lifetime. Enjoy free
+          100GB bandwidth of hosting and free SSL certificate lifetime.
+        image: /images/warranty.svg
+      - title: Offline Ready
+        description: Download and install once our app, and enjoy the benefit of
+          managing and modifying your sites even without internet. See your site
+          changes quickly as you edit your site.
+        image: /images/monitor.svg
+      - title: Customizable
+        description: Get started Building Unlimited Customizable Sites Offline, 100 GB
+          Free Hosting Lifetime, Quickly Deploy SEO Optimized Sites.
+        image: /images/theme.svg
+      - title: SEO Optimized
+        description: Get found in Google search engine top results. No need to configure
+          anything , just provide a high quality content and your good to go.
+        image: /images/seo.svg
+      - image: /images/p2p.svg
+        title: Receive Payments Online/Offline
+        description: "Accept payments over the counter,remittance, online banking, or
+          credit card we got your covered. "
+      - image: /images/affiliate-marketing-2.svg
+        title: Get paid to promote us
+        description: We wanna reward those individuals who are passionate on sharing our
+          applications to their friends, family and colleagues
   - type: team_short
     template: templates/teams/short.html
     title: Meet Our Team
@@ -74,8 +82,8 @@ sections:
       shade: ""
       color: primary-darker
     title_text:
-      shade: "600"
-      color: purple
+      shade: ""
+      color: primary-darker
     role_text:
       shade: ""
       color: brand
@@ -85,7 +93,7 @@ sections:
           name: CEO / Developer
           url: /images/profile.jpg
         role:
-          name: CEO
+          name: CEO / Creator of Thriftshop Apps
         description: I actually think that the most efficacious way of making a
           difference is to lead by example, and doing random acts of kindness is
           setting a very good example of how to behave in the world.
@@ -94,32 +102,9 @@ sections:
           name: VP Marketing
           url: /images/echo.jpg
         role:
-          name: VP Marketing / Co-Founder
+          name: "VP Marketing "
         description: Most of the important things in the world have been accomplished by
           people who have kept on trying when there seemed to be no hope at all.
-      - name: Arjay
-        image:
-          name: Team Member
-          url: /images/arjay.jpg
-        role:
-          name: Co-Founder
-        description: “Success is walking from failure to failure with no loss of
-          enthusiasm.”
-      - name: Bobby
-        image:
-          name: Team Member
-          url: /images/bobby.jpg
-        role:
-          name: Co-Founder
-        description: Live up to your potential instead of imitating someone else's.
-      - name: Ishi
-        image:
-          name: Team Member
-          url: /images/ishi.jpg
-        role:
-          name: Brand Ambassadress
-        description: I always find beauty in things that are odd and imperfect, they are
-          much more interesting.
       - name: Cholo
         image:
           name: Team Member
@@ -128,22 +113,80 @@ sections:
           name: COO
         description: "In the business world, everyone is paid in two coins: cash and
           experience. Take the experience first; the cash will come later."
-  - bg:
-      shade: "500"
-      color: purple
-    dot:
-      color: purple
-      shade: "500"
-    text:
-      shade: "500"
-      color: purple
-    cta:
-      - text: Check it Out
-        url: https://thriftshop.site/
-    title: Thriftshop App
-    template: templates/cta/brand-panel.html
-    type: cta_brand_panel
-    image: /images/thriftshop-apps.jpg
-    description: An Opinionated E-Commerce Site For Filipino Online Seller. Built
-      With Fastest Web Framework Hugo for Its Content Management System.
+      - name: Drew
+        image:
+          name: Team Member
+          url: /images/18034091_1329870170432765_4794002620839940695_n.jpg
+        role:
+          name: CTO
+        description: Together we can change the world, just one random act of kindness
+          at a time.
+  - brand_title: We pride ourselves as
+    lowerbg:
+      color: gray
+      shade: "50"
+    upperbg:
+      color: blueGray
+      shade: "700"
+    featured:
+      color: brand
+      shade: ""
+    tiers:
+      - currency: PHP
+        amount: 999
+        per_unit: lifetime
+        button:
+          url: /products/individual-license
+          cta: Not Yet Available
+        name: Individual License
+        features:
+          - 1 Account
+          - 1 Device
+          - Site Manager
+          - Free Theme
+          - 1 year updates and support
+          - Unlimited sites
+      - currency: PHP
+        amount: 4999
+        per_unit: lifetime
+        button:
+          url: /products/founders-license
+          cta: Only 1000 License Available
+        name: Founders License
+        features:
+          - Multiple accounts
+          - Multiple devices
+          - Site Manager
+          - Free Theme
+          - Lifetime updates and support
+          - Unlimited sites
+      - currency: PHP
+        amount: 4999
+        per_unit: lifetime
+        button:
+          url: /products/team-license
+          cta: Not yet available
+        name: Team License
+        features:
+          - Multiple accounts
+          - Multiple devices
+          - Site Manager
+          - Free Theme
+          - 1 year updates and support
+          - Unlimited sites
+    title: The Price to Beat!
+    template: templates/pricing/three-tier.html
+    type: pricing_three_tier
+    description: "Pay Once Use Forever , No Hassle of Monthly Fee, No Hidden Fee. "
+  - type: testimonials_simple_centered
+    testimonial: I love how you can edit and update your site even without internet,
+      and quickly deploy my updates when Im ready with 1 Click of button.
+    image:
+      image: /images/186929092_108127231465633_514751759846666825_n.jpg
+      alt: Thrifted Goodies
+    template: templates/testimonials/simple-centered.html
+    user:
+      name: Ishi
+      company: "Owner @Thriftedgoodieess "
+      image: images/avatar.svg
 ---

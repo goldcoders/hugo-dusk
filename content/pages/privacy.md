@@ -6,7 +6,7 @@ showcart: true
 showsearch: true
 title: Privacy Policy
 slug: privacy
-description: Pitlords INC. - Privacy Policy
+description: GOLDCODERS CORP - Privacy Policy
 featured_image: /images/privacy-banner.jpg
 keywords:
   - privacy
@@ -32,10 +32,10 @@ For the purposes of this Privacy Policy:
 
 - **You** means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.
 
-- **Company** (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to **Pitlord INC.**
+- **Company** (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to **GOLDCODERS CORP.**
 - **Affiliate** means an entity that controls, is controlled by or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.
 - **Account** means a unique account created for You to access our Service or parts of our Service.
-- **Website** refers to Pitlords, accessible from **https://pitlords.com**
+- **Website** refers to Thriftshop Site, accessible from **https://thriftshop.site**
 - **Service** refers to the Website/App.
 - **Country** refers to: Philippines
 - **Service Provider** means any natural or legal person who processes the data on behalf of the Company. It refers to third-party companies or individuals employed by the Company to facilitate the Service, to provide the Service on behalf of the Company, to perform services related to the Service or to assist the Company in analyzing how the Service is used.
@@ -173,4 +173,4 @@ You are advised to review this Privacy Policy periodically for any changes. Chan
 ### Contact Us
 If you have any questions about this Privacy Policy, You can contact us:
 
-- By email: support@pitlords.com
+- By email: support@thriftshop.site

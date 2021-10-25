@@ -1,12 +1,16 @@
 ---
 index: true
 draft: false
-showcart: false
-showsearch: false
+showcart: true
+showsearch: true
 title: Frequently Asked Questions
 slug: faq
 description: Frequestly Asked Question Page
 featured_image: /images/faq-banner.jpeg
+cover_photo:
+  font: aguafina
+  color: gray
+  shade: "50"
 _build:
   list: false
   render: true

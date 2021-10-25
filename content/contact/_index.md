@@ -2,8 +2,8 @@
 draft: false
 showcontact: true
 index: true
-showcart: false
-showsearch: false
+showcart: true
+showsearch: true
 custom:
   - type: data
     key: contact_agree
@@ -15,7 +15,7 @@ featured_image: /images/support-banner.jpeg
 cover_photo:
   color: white
   shade: ""
-  font: steel
+  font: aguafina
 form:
   action: https://docs.google.com/forms/u/1/d/e/1FAIpQLSf88ng1DrsWRw5nMEgTXqLA-GBIktjphzQ_GWupVjufhyfTyg/formResponse?embedded=true
   method: POST
@@ -23,7 +23,7 @@ form:
     text: Submit
   recaptcha:
     enable: true
-    siteKey: 6LeqJi0bAAAAAO8cei2lwefn28llXM3uwoA0Dqcc
+    siteKey: 6LfOIrYZAAAAAHzZKPjccgmXDq2i3mc5Kuag883f
   agreement:
     enable: true
     text: I have read and agreed to

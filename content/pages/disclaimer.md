@@ -6,7 +6,7 @@ showcart: true
 showsearch: true
 title: Disclaimer
 slug: disclaimer
-description: This is the Site Disclaimer
+description: Site Disclaimer
 featured_image: /images/dislaimer-banner.jpg
 keywords:
   - dislaimer
@@ -29,9 +29,9 @@ The following definitions shall have the same meaning regardless of whether they
 
 For the purposes of this Disclaimer:
 
-- **Company** (referred to as either "the Company", "We", "Us" or "Our" in this Cookies Policy) refers to **Pitlord INC.**, 
+- **Company** (referred to as either "the Company", "We", "Us" or "Our" in this Cookies Policy) refers to **GOLDCODERS CORP.**,
 - **You** means the individual accessing the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.
-- **Website** refers to **Pitlords**, accessible from pitlords.com.
+- **Website** refers to **Thriftshop Site**, accessible from thriftshop.site.
 - **Service** refers to the Website.
 
 ### Disclaimer
@@ -86,4 +86,4 @@ The Company will not be liable to You or anyone else for any decision made or ac
 
 If you have any questions about this Disclaimer, You can contact Us:
 
-By email: support@pitlords.com
+By email: support@thriftshop.site
