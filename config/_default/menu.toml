@@ -4,6 +4,16 @@ name = "Home"
 weight = 1
 
 [[main]]
+weight = 2
+name = "Products"
+URL = "/products/"
+
+[[main]]
+weight = 3
+name = "Blog"
+URL = "/blog/"
+
+[[main]]
 URL = "/faq/"
 name = "FAQs"
 weight = 4

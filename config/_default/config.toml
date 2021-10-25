@@ -1,37 +1,18 @@
 enableEmoji = true
 enableRobotsTXT = true
-title = "Goldcoders"
-baseURL = "https://goldcoders.dev"
-googleAnalytics = ""
 disqusShortname = "goldcoders"
 languageCode = "en-us"
+googleAnalytics = ""
 summaryLength = "10"
+title = "Thriftshop Site"
+baseURL = "https://thriftshop.site/"
 paginate = 9
+ignoreErrors = ["error-missing-instagram-accesstoken", "error-remote-getjson"]
 
 [permalinks]
 blogs = "/blog/:slug/"
 products = "/products/:slug/"
 pages = "/:slug"
-
-[privacy]
-
-[privacy.disqus]
-disable = true
-
-[privacy.googleAnalytics]
-disable = false
-
-[privacy.instagram]
-disable = true
-
-[privacy.twitter]
-disable = true
-
-[privacy.vimeo]
-disable = true
-
-[privacy.youtube]
-disable = true
 
 [author]
 homepage = "https://github.com/goldcoders"
