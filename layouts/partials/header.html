@@ -1,9 +1,9 @@
-<nav class="shadow bg-gradient-to-r from-primary-darker via-purple-600 to-pink-400">
-  <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
+<nav class="shadow {{ with $.Site.Params.navbar.color -}}bg-{{.}}{{with $.Site.Params.navbar.shade}}-{{.}}{{end}}{{end -}}">
+  <div class="px-2 mx-auto max-w-7xl sm:px-4 lg:px-8">
     <div class="flex justify-between h-16">
       <div class="flex px-2 lg:px-0">
         {{/* <!-- Logo --> */}}
-        <div class="flex-shrink-0 flex items-center">
+        <div class="flex items-center flex-shrink-0">
           {{ with $.Site.Params.logo}}<img class="block mr-0 {{if eq $.Site.Params.brand.enable true}}md:mr-5{{end}} h-{{.height}} w-auto" src="{{.image}}" alt="{{$.Site.Params.brand.name}}">{{end -}}
           {{if $.Site.Params.brand.enable}}
           {{- if or (eq $.Site.Params.brand.font "aguafina") (eq $.Site.Params.brand.font "qwigley") }}
@@ -19,13 +19,13 @@
           {{- end -}}
               {{- $.Site.Params.brand.name -}}
               {{ if eq $.Site.Params.brand.font "aguafina"}}
-              <span class="font-hairline leading-10 absolute top-0 mb-15 ml-2 text-2xl mx-2
+              <span class="font-hairline leading-10 absolute top-0 left-full ml-2 text-2xl mx-2 -mt-3
               font-{{ $.Site.Params.tag.font}}
               {{ with $.Site.Params.tag.color -}}text-{{.}}{{with $.Site.Params.tag.shade}}-{{.}}{{end}}{{end -}}
-              ">{{$.Site.Params.brand.tag}}</span>
+              ">{{$.Site.Params.tag.name}}</span>
               {{ else if eq $.Site.Params.brand.font "qwigley"}}
               <span class="
-              font-{{ $.Site.Params.tag.font}} font-hairline leading-10 absolute top-0 -mr-10 mt-2 text-base">{{$.Site.Params.tag.name}}</span>
+              font-{{ $.Site.Params.tag.font}} font-hairline leading-10 absolute top-0 left-full -mr-10 mt-2 text-base">{{$.Site.Params.tag.name}}</span>
               {{else if eq $.Site.Params.brand.font "sans"}}
               <span class="font-hairline text-2xl
               font-{{ $.Site.Params.tag.font}}
@@ -69,14 +69,14 @@
       {{/* <!-- Search Query Input --> */ -}}
       {{ if $.Page.Params.showsearch -}}
       <div class="flex-1 flex items-center justify-center px-2 {{if $.Site.Params.brand.enable}}lg:ml-6{{end}} lg:justify-end">
-        <div class="max-w-lg w-full lg:max-w-xs">
+        <div class="w-full max-w-lg lg:max-w-xs">
           <div class="relative">
-            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <svg class="h-5 w-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+              <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
               </svg>
             </div>
-            <input x-model="searchQuery" x-on:input.debounce.750ms="executeSearch()" id="search" class="block w-full pl-10 pr-3 py-2 border border-neutral rounded-md leading-5  placeholder-neutral focus:outline-none focus:placeholder-primary focus:border-primary focus:shadow-outline-primary text-primary sm:text-sm transition duration-150 ease-in-out" placeholder="Search" type="search">
+            <input x-model="searchQuery" x-on:input.debounce.750ms="executeSearch()" id="search" class="block w-full py-2 pl-10 pr-3 leading-5 transition duration-150 ease-in-out border rounded-md border-neutral placeholder-neutral focus:outline-none focus:placeholder-primary focus:border-primary focus:shadow-outline-primary text-primary sm:text-sm" placeholder="Search" type="search">
         </div>
         </div>
       </div>
@@ -88,10 +88,10 @@
       <div slot="icon" class="relative">
           <div
             x-text="cart.length"
-            class="absolute text-xs rounded-full -mt-1 -mr-2 px-1 font-bold top-0 right-0 bg-cart-bubble text-cart-count">
+            class="absolute top-0 right-0 px-1 -mt-1 -mr-2 text-xs font-bold rounded-full bg-cart-bubble text-cart-count">
           </div>
           <svg
-            class="stroke-current text-cart inline-block h-8 w-8"
+            class="inline-block w-8 h-8 stroke-current text-cart"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -112,11 +112,11 @@
       {{/* <!-- List of Mobile Menus --> */}}
       <div class="flex items-center lg:hidden">
         {{/* <!-- Menu For Toggling NavBar --> */ -}}
-        <button @click="menu=!menu" class="ml-2 inline-flex items-center justify-center p-2 rounded-md text-neutral focus:outline-none transition duration-150 ease-in-out" aria-label="Main menu" aria-haspopup="true">
-          <svg :class="{'hidden': menu, 'block': !menu}" class="block h-6 w-6 text-tag" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <button @click="menu=!menu" class="inline-flex items-center justify-center p-2 ml-2 transition duration-150 ease-in-out rounded-md text-neutral focus:outline-none" aria-label="Main menu" aria-haspopup="true">
+          <svg :class="{'hidden': menu, 'block': !menu}" class="block w-6 h-6 text-tag" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
-          <svg :class="{'block': menu, 'hidden': !menu}" class="hidden h-10 w-10 text-close" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg :class="{'block': menu, 'hidden': !menu}" class="hidden w-10 h-10 text-close" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
@@ -164,7 +164,7 @@
   </div>
   {{/* <!-- Search Results --> */}}
   {{- if $.Page.Params.showsearch -}}
-  <div class="hidden bg-light border-b-4 border-dotted border-primary"
+  <div class="hidden border-b-4 border-dotted bg-light border-primary"
     @click.away="searchQuery = ''; searchResults = [];"
     x-show="searchResults.length >0"
     x-transition:enter="transition ease-out duration-150"
@@ -176,20 +176,20 @@
     :class="{'hidden': searchResults.length < 1, 'block': searchResults.length >0}"
     >
     <template x-for="item in searchResults" :key="item">
-        <div  class="relative flex max-w-7xl mx-auto px-0  md:px-10 items-center">
-        <a :href="item.permalink" class="z-10 w-full p-1 sm:p-1 md:p-3 flex rounded-lg hover:bg-gray-100 transition ease-in-out duration-150 space-x-2 md:space-x-8">
-        <div class="hidden sm:block flex-shrink-0">
-            <img x-show="item.image" class="w-32 h-20 object-cover rounded-md" :src="item.image"/>
-            <div x-show="!item.image" class="box-border -mx-2 h-20 w-32 p-2 border-2 border-gray-400 bg-gray-200">
-            <div class="h-full w-full bg-gray-400"></div>
+        <div  class="relative flex items-center px-0 mx-auto max-w-7xl md:px-10">
+        <a :href="item.permalink" class="z-10 flex w-full p-1 space-x-2 transition duration-150 ease-in-out rounded-lg sm:p-1 md:p-3 hover:bg-gray-100 md:space-x-8">
+        <div class="flex-shrink-0 hidden sm:block">
+            <img x-show="item.image" class="object-cover w-32 h-20 rounded-md" :src="item.image"/>
+            <div x-show="!item.image" class="box-border w-32 h-20 p-2 -mx-2 bg-gray-200 border-2 border-gray-400">
+            <div class="w-full h-full bg-gray-400"></div>
             </div>
         </div>
-        <div class="space-y-1 min-w-0 flex-1">
-        <h4 class="text-left font-semibold text-xl leading-6 truncate text-primary" x-text="item.title">
+        <div class="flex-1 min-w-0 space-y-1">
+        <h4 class="text-xl font-semibold leading-6 text-left truncate text-primary" x-text="item.title">
         </h4>
-        <p class="break-all text-left text-sm font-medium text-gray-700" x-text="item.description">
+        <p class="text-sm font-medium text-left text-gray-700 break-all" x-text="item.description">
         </p>
-        <p class="break-all text-left text-sm font-normal text-gray-500" x-text="item.summary.substr(0,200)">
+        <p class="text-sm font-normal text-left text-gray-500 break-all" x-text="item.summary.substr(0,200)">
         </p>
         </div>
         </a>

@@ -2,7 +2,6 @@
     {{/* Set Local Storage for Cart and Paymongo */}}
     {{ if $.Page.Params.showcart }}
     var cart = store.namespace("cart");
-    var paymongo = store.namespace("paymongo");
     {{/* Initialize Cart */}}
     function cartInit() {
       if (!store.has("cart.items")) {
@@ -18,10 +17,7 @@
       }else if(store.has("cart.shipping_fee") && cart("shipping_fee") !== parseFloat("{{ .Site.Data.cart.shipping_fee }}")){
         cart("shipping_fee", parseFloat("{{.Site.Data.cart.shipping_fee}}"));
       }
-      {{/* TODO: Create A Custom Checkout */}}
-      if (!store.has("paymongo.reference_no")) {
-        paymongo("reference_no", null);
-      }
+
     }
     {{- end -}}
     {{/* Search Functionality */}}
@@ -378,7 +374,7 @@ function shopcart(){
           }
           let total = 0;
           items.forEach((item) => {
-            total += item.qty * parseFloat(item.price);
+            total += (item.qty * parseFloat(item.price)).toFixed(2);
           });
           return total.toFixed(2);
         },
@@ -446,24 +442,39 @@ function shopcart(){
           }
          }
         },
+        generateUUID() { // Public Domain/MIT
+            var d = new Date().getTime();//Timestamp
+            var d2 = ((typeof performance !== 'undefined') && performance.now && (performance.now()*1000)) || 0;//Time in microseconds since page-load or 0 if unsupported
+            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                var r = Math.random() * 16;//random number between 0 and 16
+                if(d > 0){//Use timestamp until depleted
+                    r = (d + r)%16 | 0;
+                    d = Math.floor(d/16);
+                } else {//Use microseconds since page-load if supported
+                    r = (d2 + r)%16 | 0;
+                    d2 = Math.floor(d2/16);
+                }
+                return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+            });
+        },
         setLinkData() {
-          const amount = parseFloat(this.getTotal()) * 100;
+          const amount = parseFloat(this.getTotal());
           const items = cart("items").map(function (a) {
             return `${a.name} (${a.qty})`;
           });
           const description = items.toString();
-          const remarks = null;
-
           return {
+            req_id: this.generateUUID(),
             amount: amount,
             description: description,
-            remarks: remarks,
+            notification_url: `${window.location.origin}/.netlify/functions/bux-notify`,
+            redirect_url: `${window.location.origin}/thank-you`,
           };
         },
         async createLink() {
           const data = this.setLinkData();
           // this URL if using per domain name functions must be updated to that subdomain
-          let url = `${window.location.origin}/.netlify/functions/create-link`;
+          let url = `${window.location.origin}/.netlify/functions/bux-checkout`;
           try {
                 const config = {
                     method: 'POST',
@@ -472,14 +483,12 @@ function shopcart(){
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify(data)
-                }
+                };
                 const response = await fetch(url, config)
-                //const json = await response.json()
                 if (response.ok) {
                     response.json().then(function (data) {
                         console.log(data);
-                        const {url} = data.data.attributes;
-                        paymongo("reference_no", data.data.id);
+                        const {url} = data.checkout_url;
                         window.location.replace(url);
                     });
                 }
