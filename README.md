@@ -8,17 +8,23 @@
 
 ## Using Checkout with Paymongo
 
--   Set this on your netlify account ENV Variables for the specific site
+-   You  need to be logged inside netlify account, go to https://app.netlify.com/sites/${SITE_NAME}/settings/deploys#environment , replace the SITE_NAME with your own
 
+Add the Following, Create NEW VARIABLE
 ```
-PAYMONGO_EMAIL=
-PAYMONGO_PASS=
-PAYMONGO_LIVEMODE=
+PAYMONGO_EMAIL
+PAYMONGO_PASS
+PAYMONGO_LIVEMODE
 ```
+set `livemode` to `true`
 
 ## Using Custom Domain Name
 
--   Update your site DNS to point to netlify DNS
+-  Go to https://app.netlify.com/sites/${SITE_NAME}/settings/domain , replace the SITE_NAME with your own
+
+Click Add Domain Alias , and set your A record, and other DNS settings 
+
+- Go to your Domain provider and point your domain to
 
 ```
 dns1.p05.nsone.net
@@ -27,8 +33,7 @@ dns3.p05.nsone.net
 dns4.p05.nsone.net
 ```
 
--   Add your Domain in Netlify
--   Add DNS Record in your Domain inside Netlify
+
 
 ## Using FB Messenger Chat Plugin
 
