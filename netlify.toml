@@ -24,7 +24,7 @@ port = 3000
 
 [build.environment]
   # hugo env
-  HUGO_VERSION = "0.84.0"
+  HUGO_VERSION = "0.88.1"
   HUGO_ENABLEGITINFO = "true"
   SNOWPACK_PUBLIC_BACKEND_TYPE="git-gateway"
   SNOWPACK_PUBLIC_BRANCH="main"
